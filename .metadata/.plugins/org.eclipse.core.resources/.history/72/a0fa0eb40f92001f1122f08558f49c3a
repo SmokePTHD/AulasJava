@@ -1,0 +1,9 @@
+package clinica;
+
+public class main {
+	public static void main(String[] args) {
+		Clinica cliente1 = new Clinica(50, true, "19/12/2024", "Gonçalo Sousa", "João Delgado", 1);
+		
+		clinica1.checkAppointment();
+	}
+}

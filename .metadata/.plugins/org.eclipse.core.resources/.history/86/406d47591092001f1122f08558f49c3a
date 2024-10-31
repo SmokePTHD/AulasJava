@@ -1,0 +1,26 @@
+package clinica;
+
+public class Clinica {
+	int price;
+	boolean statusPayment;
+	String date; 
+	String pacient;
+	String doctor;
+	int office;
+	
+	public Clinica(int price, boolean statusPayment, String date, String pacient, String doctor, int office) {
+		this.price = price;
+		this.statusPayment = statusPayment;
+		this.date = date;
+		this.pacient = pacient;
+		this.doctor = doctor;
+		this.office = office;
+	}
+	
+	
+	void checkAppointment() {
+		System.out.println("O Dia da consulta é " + date + " no consultorio " + office + ".");
+	}
+	
+	void 
+}

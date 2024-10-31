@@ -1,0 +1,14 @@
+package clinica;
+
+public class Clinica {
+	int price;
+	boolean statusPayment;
+	String date; 
+	String pacient;
+	String doctor;
+	int office;
+	
+	public static void main(String[] args) {
+		
+	}
+}

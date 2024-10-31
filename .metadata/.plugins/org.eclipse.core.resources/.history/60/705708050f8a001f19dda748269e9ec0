@@ -1,0 +1,9 @@
+package Java;
+
+public class Segunda {
+	public static void main(String[] args) {
+		int x = 5;
+		// sysout + Ctrl+Space é shortcut no Eclipse para o System.out.println()
+		System.out.println(x > 3 && x < 10);
+	}
+}

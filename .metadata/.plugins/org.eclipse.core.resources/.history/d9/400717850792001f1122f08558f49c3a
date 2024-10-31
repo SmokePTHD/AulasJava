@@ -1,0 +1,8 @@
+package carros;
+
+public class Principal {
+	public static void main(Sring[] args) {
+		// Criar objetos da classe Carro; o construtor tem o mesmo nome da classe
+		Carros c1 = new Carros("Corsa", 10, 0)
+	}
+}

@@ -1,0 +1,5 @@
+INDEX VERSION 1.134+/home/smoke/eclipse-workspace/.metadata/.plugins/org.eclipse.jdt.core
+1865797976.index
+857277279.index
+2078267704.index
+1283489596.index

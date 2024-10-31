@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libraryInfos>
+    <libraryInfo home="/usr/lib/jvm/java-22-openjdk" version="22.0.2"/>
+    <libraryInfo home="/usr/lib/jvm/java-23-openjdk" version="23"/>
+</libraryInfos>

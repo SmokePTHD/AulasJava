@@ -1,0 +1,5 @@
+package clinica;
+
+public class main {
+	Clinica cliente1 = new Clinica();
+}

@@ -1,0 +1,32 @@
+package Java;
+
+public class Segunda {
+	public static void main(String[] args) {
+		int x = 5;
+		// sysout + Ctrl+Space é shortcut no Eclipse para o System.out.println()
+		System.out.println(x > 3 && x < 10); // retorna true porque 5 é maior que 3 e menir do que 10
+		int x1 = 5;
+		System.out.println(x1 > 3 || x1 < 4); // Retorna true porque uma das condições é true
+		//Ctrl+I para corrigir indentação2
+		int x2 = 5;
+		System.out.println(!(x2 > 3 && x2 < 10)); // Retorna false porque ! (not) é usado para reverter o resultado
+		// Métodos para strings (alguns exemplos)
+		// length / comprimento 
+		String txt = "abcdefghijklmnopqrstuvwxyz";
+		System.out.println("O comprimento da string é: " + txt.length());
+		// toUpperCase e toLoweCase / maiúscula / minúscula
+		String txt1 = "Olá Mundo!";
+		System.out.println(txt1.toUpperCase());
+		System.out.println(txt1.toLowerCase());
+		// indexOf / índice
+		String txt2 = "Qual o índice (primeito posição) de cão?";
+		System.out.println(txt2.indexOf("cão"));
+		// Concatenação com +
+		String nome = "João";
+		String apelido = "Domingos";
+		System.out.println(nome + " " + apelido);
+		// Concatenação com concat
+		String marca = "Renault";
+		String modelo = "Clio";
+	}
+}
