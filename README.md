@@ -1,2 +1,3 @@
 # AulasJava
-Aulas de Java
+
+Todos os exercicios realizados nas aulas de Java
