@@ -44,6 +44,23 @@ public class FormasLivresExemplo extends JPanel {
 		 path.moveTo(50, 300); // Move o "ponteiro" do caminho para o ponto inicial (50, 300)
 		 path.curveTo(100, 250, 150, 350, 200, 300); // Desenha uma curva de Bézzier com dois pontos de controle (100, 250) e (150, 350), terminando em (200, 300)
 		 path.lineTo(250, 350); // Desenha uma linha reta do ponto atual até o ponto (250, 350)
-		 path.closePath(); // Fecha o caminho (curva e linha) 
+		 path.closePath(); // Fecha o caminho (curva e linha) criado com GeneralPath
+		 
+		 g2d.draw(path); // Desenha o caminho (curva e linha) criado com GeneralPath
+	 }
+	 
+	 public static void main(String[] args) {
+		 // Criando a janela (frame) para exibir os gráficos
+		 JFrame frame = new JFrame("Exemplo de formas livres");
+		 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Fecha a janela da aplicação ao fechar a janela
+		 frame.setSize(500, 400); // Define o tamanho da janela
+		 
+		 // Adiciona o painel de desenha à janela
+		 FormasLivresExemplo painel = new FormasLivresExemplo(); // Cria uma instância do painel de desenho
+		 frame.add(painel); // Adiciona o painel ao frame
+		 
+		 // Torna a janela visível
+		 frame.setVisible(true);
+		 
 	 }
 }
