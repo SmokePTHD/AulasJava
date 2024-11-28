@@ -10,5 +10,9 @@ public class CalculadoraInterface {
 		JFrame frame = new JFrame("Calculadora");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(400, 300);
+		
+		frame.setLayout(new GridLayout(5, 1));
+		
+		frame.setVisible(true);
 	}
 }
