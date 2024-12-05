@@ -64,6 +64,31 @@ public class MovimentoCirculo2 extends JFrame {
        });
 
        setVisible(true); // Torna a janela visível
+       
+       // NOVO: Thread (linha de execução demtro de um processo) para mover o círculo vermelho ao longo das bordas
+       new Thread(() -> {
+    	   while(!colisao) { // Loop infinito para mover o círculo vermelho
+    		   moverCirculoVermelho();
+    		   painel.repaint(); // Redesenha o painel
+    		   try {
+    			   Thread.sleep(30); // Paragem de 30 milisegundos para controlar a velocidade e suavidade do movimento
+    		   } catch (InterruptedException e) {
+    			   e.printStackTrace(); // Trata interrupções no thread
+    		   }
+    	   }
+    	   System.out.println("Colisão detectada!"); // Imprime mensagem quando ocorre a colisão
+       }).start();
+   }
+   
+   // NOVO: Método para mover o círculo vermelho pelas bordas
+   private void moverCirculoVermelho() {
+	   switch (direcao) {
+	   case 0: //Movimento para a direita
+		   xVermelho += VELOCIDADE;
+		   if (xVermelho >= getWidth() - CIRCULO_DIAMETRO) { // Limite direito
+			   xVermelho = getWidth() - CIRCULO_DIAMETRO - 25; // Impede que ultrapasse o limite direito
+		   }
+	   }
    }
 
    // Classe interna para desenhar o círculo
