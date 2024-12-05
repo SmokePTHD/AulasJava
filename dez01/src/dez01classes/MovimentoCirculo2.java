@@ -5,17 +5,21 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-public class MovimentoCirculo1 extends JFrame {
+public class MovimentoCirculo2 extends JFrame {
    private int x = 150; // Posição inicial X do círculo azul. A variável é privada, então não é acessível fora desta classe.
    private int y = 150; // Posição inicial Y do círculo azul. 
    private final int CIRCULO_DIAMETRO = 50; // Diâmetro do círculo azul.
 
-// Novo
 	private int xVermelho = 300; // Posição X inicial do círculo vermelho.
 	private int yVermelho = 300; // Posição Y inicial do círculo vermelho.
 	private boolean circuloVermelhoVisivel = true; // Controla se o circulo vermelho está visível
-   
-   public MovimentoCirculo1() {
+	private final int VELOCIDADE = 5; // NOVO: Velocidade do movimento do círculo vermelho
+	private int direcao = 0; // NOVO: Direção do movimento (0: direita, 1: baixo, 2: esquerda, 3: cima)
+	
+	private boolean colisao = false; // NOVO: Verifica se ocorreu a colisão
+	
+   // ALTERADO
+   public MovimentoCirculo2() {
        setTitle("Mover Círculo"); // Define o título da janela
        setSize(400, 400); // Define o tamanho da janela
        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Fecha o programa ao fechar a janela
@@ -81,7 +85,7 @@ public class MovimentoCirculo1 extends JFrame {
    }
 
    public static void main(String[] args) {
-       new MovimentoCirculo1(); // Cria e exibe a janela
+       new MovimentoCirculo2(); // Cria e exibe a janela
    }
 }
 
