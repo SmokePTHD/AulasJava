@@ -83,11 +83,35 @@ public class MovimentoCirculo2 extends JFrame {
    // NOVO: Método para mover o círculo vermelho pelas bordas
    private void moverCirculoVermelho() {
 	   switch (direcao) {
-	   case 0: //Movimento para a direita
-		   xVermelho += VELOCIDADE;
-		   if (xVermelho >= getWidth() - CIRCULO_DIAMETRO) { // Limite direito
-			   xVermelho = getWidth() - CIRCULO_DIAMETRO - 25; // Impede que ultrapasse o limite direito
-		   }
+		   case 0: //Movimento para a direita
+			   xVermelho += VELOCIDADE;
+			   if (xVermelho >= getWidth() - CIRCULO_DIAMETRO) { // Limite direito
+				   xVermelho = getWidth() - CIRCULO_DIAMETRO - 25; // Impede que ultrapasse o limite direito
+				   direcao = 1; // Muda para a baixo
+			   }
+			   break;
+		   case 1: // Movimento para baixo
+			   yVermelho += VELOCIDADE;
+			   if (yVermelho >= getHeight() - CIRCULO_DIAMETRO) { // Limite Inferior
+				   yVermelho = getHeight() - CIRCULO_DIAMETRO - 40; // Impede que ultrapasse o limite inferior
+				   direcao = 2; // Muda para esquerda
+			   }
+			   break;
+		   case 2: // Movimento para a esquerda
+			   xVermelho -= VELOCIDADE;
+			   if (xVermelho <= 0) { // Limite esquerdo
+				   xVermelho = 0; // Impede que ultrapasse o limite esquerdo
+				   direcao = 3; // Muda para cima
+			   }
+			   break;
+			   
+		   case 3: // Movimento para baixo
+			   yVermelho -= VELOCIDADE;
+			   if (yVermelho <= 0) { // Limite superior
+				   yVermelho = 0; // Impede que ultrapasse o limite superior
+				   direcao = 0; // Muda para cima
+			   }
+			   break;
 	   }
    }
 
