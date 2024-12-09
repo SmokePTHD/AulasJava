@@ -25,4 +25,30 @@ public class JogoPong extends JPanel implements ActionListener {
 	
 	//Timer para atualização de tela (60FPS)
 	private Timer timer;
+	
+	// Construtor da class PongGAme
+	public JogoPong() {
+		// Define o tamanho do painel e a cor de fundo
+		setPreferredSize(new Dimension(LARGURA, ALTURA));
+		setBackground(Color.BLACK);
+		
+		// Permite que o painel tenha foco para capturar eventos de teclado
+		setFocusable(true);
+		
+		// Adicionar os listeners para as teclas de movimento
+		addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent e) {
+				// Controle do jogador 1 com as teclas W e S
+				if(e.getKeyCode() == KeyEvent.VK_W) {
+					jogador1DY = -5; // Mover para cima
+				} else if (e.getKeyCode() == KeyEvent.VK_S) {
+					jogador1DY = 5; // Mover para baixo
+				}
+				
+				// Controle do jogador 2 com as teclas de setas
+				
+			}
+		});
+	}
 }
