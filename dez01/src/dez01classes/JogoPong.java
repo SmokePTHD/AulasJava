@@ -13,7 +13,9 @@ public class JogoPong extends JPanel implements ActionListener {
 	private static final int LARGURA_PADDLE = 20, ALTURA_PADDLE = 100;
 	private static final int TAMANHO_BOLA = 20;
 	
-	// Falta coisas aqui
+	//Posições iniciais da bola e movimentos
+	private int bolaX = LARGURA / 2, bolaY = ALTURA / 2;
+	private int bolaDX = -2, bolaDY = 2; //Direção da bola (movimento); DX e DY é convenção comum em programação para descrever mudanças (ou deslocamentos) em coordenadas espaciais
 	
 	// Posições das barras (paddles) dos jogaores
 	private int jogador1Y = ALTURA / 2 - ALTURA_PADDLE /2;
